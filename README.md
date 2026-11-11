@@ -6,7 +6,7 @@
 
 A probability of default (PD) model built on 150,000 real borrowers and validated the way a bank validates its models. The notebook then turns the model into a score cutoff and estimates the portfolio's expected loss, VaR and stressed loss.
 
-![Dashboard](images/dashboard.png)
+![Summary](images/01_ringkasan.png)
 
 ## Questions answered
 
@@ -63,9 +63,15 @@ There are only four assumptions, and all of them are in `P`:
 Key findings:
 - **Credit utilization and past delinquency drive default.** They have the largest coefficients; older borrowers are safer.
 - **The model ranks risk cleanly.** Actual default rate falls from 36% in the lowest score decile to 0.4% in the highest.
-- **Recommendation: a break-even cutoff at 515 points.** It turns away a small group whose actual bad rate is ten times the rest, cuts expected loss by 41% and VaR 99 by 23%.
+- **Recommendation: a break-even cutoff at 515 points.** It turns away a small group whose actual bad rate is about eleven times the rest, cuts expected loss by 41% and VaR 99 by 23%.
 
-![Validation](images/validation.png)
+### Charts
+
+Each chart is a 16:9 slide saved in `images/`, with the main message as its title (labels are in Indonesian).
+
+![Validation](images/02_validasi.png)
+![Cutoff](images/03_cutoff.png)
+![Loss and stress test](images/04_kerugian.png)
 
 ## How to run
 
