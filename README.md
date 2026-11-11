@@ -1,6 +1,6 @@
 # Consumer Credit Risk Model
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aldo02032004/msme-credit-risk-model/blob/main/credit_risk_model.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aldo02032004/credit-risk-model/blob/main/credit_risk_model.ipynb)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
@@ -73,8 +73,8 @@ Key findings:
 
 **Locally:**
 ```bash
-git clone https://github.com/aldo02032004/msme-credit-risk-model.git
-cd msme-credit-risk-model
+git clone https://github.com/aldo02032004/credit-risk-model.git
+cd credit-risk-model
 pip install -r requirements.txt
 jupyter notebook credit_risk_model.ipynb
 ```
