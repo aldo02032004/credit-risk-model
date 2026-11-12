@@ -51,7 +51,7 @@ There are only four assumptions, and all of them are in `P`:
 
 | Metric | Value | Meaning |
 |---|---|---|
-| AUC / Gini / KS | 0.853 / 0.707 / 0.537 | Strong ranking. Gradient boosting reaches 0.864 only, so the readable model is kept |
+| AUC / Gini / KS | 0.853 / 0.707 / 0.537 | Strong ranking. Gradient boosting reaches only about 0.86, so the readable model is kept |
 | Calibration | Mean PD 6.7% = actual 6.7% | The PD level is right, not just the ranking |
 | PSI dev → validation | 0.0003 | Score distribution is stable |
 | Cutoff | 515 points | Rejects 4.7% of applicants |
