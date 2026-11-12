@@ -1,0 +1,10 @@
+{
+  "name": "Credit Risk",
+  "dataColors": ["#1F3A5F", "#2A9D8F", "#E76F51", "#E9A23B", "#8D99AE", "#2B2D42"],
+  "background": "#FFFFFF",
+  "foreground": "#2B2D42",
+  "tableAccent": "#1F3A5F",
+  "good": "#2A9D8F",
+  "neutral": "#E9A23B",
+  "bad": "#E76F51"
+}
