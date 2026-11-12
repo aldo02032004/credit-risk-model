@@ -1,0 +1,13 @@
+parameter,value,unit,note
+LGD,0.45,fraction,"Basel foundation IRB, unsecured senior exposure"
+EAD,2.2222222222222223e-05,fraction of portfolio per loan,Equal for every loan; no loan amounts in the data
+Net margin,0.08,fraction per year,After funding and operating cost; sets the break-even cutoff
+Asset correlation (rho),0.15,fraction,Upper end of the Basel retail range
+Break-even PD (12 months),0.1509433962264151,fraction,margin / (margin + LGD)
+Score cutoff,514.5028031753883,points,Break-even PD converted to the score scale
+Score scale,600,points,600 points = good:bad odds 50:1; +20 points doubles the odds
+Monte Carlo scenarios,10000,count,Vasicek one-factor model
+VaR confidence,0.99,fraction,VaR 99 and CVaR 99
+Validation share,0.3,fraction,Stratified development / validation split
+Random seed,42,integer,Same scenarios for every policy
+Data source,Give Me Some Credit (OpenML 46929),-,"150,000 borrowers; target = 90+ days past due within 2 years"

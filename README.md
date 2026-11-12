@@ -73,6 +73,23 @@ Each chart is a 16:9 slide saved in `images/`, with the main message as its titl
 ![Cutoff](images/03_cutoff.png)
 ![Loss and stress test](images/04_kerugian.png)
 
+## Power BI data
+
+The last notebook cell writes eight CSV files to [`powerbi/`](powerbi). Values are raw fractions with a dot decimal, so percent formatting is set in Power BI. Losses are fractions of the whole applicant portfolio.
+
+| File | One row per | Main columns |
+|---|---|---|
+| `bucket_summary.csv` | Score decile | borrowers, predicted 2-year PD, actual 2-year default rate |
+| `cutoff_analysis.csv` | Cutoff value (450–620 and the selected 515) | approval rate, actual bad rate of approved loans, expected loss, net profit, EL reduction |
+| `loss_distribution.csv` | Monte Carlo scenario (10,000) | economy factor Z, portfolio loss without and with cutoff |
+| `risk_metrics.csv` | Portfolio (without / with cutoff) | expected loss, VaR 95, VaR 99, CVaR 99, unexpected loss |
+| `stress_scenarios.csv` | Stress scenario | Z, frequency, loss without and with cutoff, multiple of EL |
+| `model_metrics.csv` | Model | AUC, Gini, KS, development AUC |
+| `psi.csv` | Score bucket | development share, validation share, PSI contribution |
+| `assumptions.csv` | Parameter | value, unit, note |
+
+The stress test computes the loss at a fixed state of the economy, not a full distribution, so VaR is only reported for the base portfolio. Expected loss in `cutoff_analysis.csv` uses the formula (PD × LGD); `risk_metrics.csv` uses the simulation, so the two differ by about 2%.
+
 ## How to run
 
 **Google Colab (easiest):** click the *Open in Colab* badge and run all cells.
