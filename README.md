@@ -21,16 +21,16 @@ flowchart LR
     A["1. Data<br/>150k borrowers"] --> B["2. PD model<br/>logistic vs boosting"]
     B --> C["3. Score<br/>break-even cutoff"]
     C --> D["4. Loss<br/>EL, Vasicek, stress"]
-    D --> E["5. Results<br/>tables, dashboard"]
+    D --> E["5. Results<br/>4 slides, 2 tables"]
 ```
 
 | Step | What happens | Main output |
 |---|---|---|
 | 1. Data | Give Me Some Credit, 10 features, 2-year default target | `gm`, `y` |
-| 2. PD model | Logistic regression (champion) vs gradient boosting (challenger). AUC, Gini, KS, Brier, calibration curve, PSI | `val`, `coef` |
+| 2. PD model | Logistic regression (champion) vs gradient boosting (challenger). AUC, Gini, KS, calibration, PSI | `val`, `coef` |
 | 3. Score | Points scale (600 = odds 50:1), break-even cutoff, default rate per score decile | `cutoff`, `band` |
 | 4. Loss | EL = PD × LGD × EAD, 10,000-scenario Vasicek Monte Carlo, stress at Z = −1, −2, −3 | `m`, `stres`, `kri` |
-| 5. Results | Summary, validation charts, tables, dashboard | Tables and figures |
+| 5. Results | Summary, validation, cutoff, and loss slides (16:9), plus validation and loss tables | `images/01-04_*.png` |
 
 The Monte Carlo set-up and the green / yellow / red status rule are reused from [lng-supply-risk-analysis](https://github.com/aldo02032004/lng-supply-risk-analysis).
 
